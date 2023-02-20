@@ -1,4 +1,4 @@
 <nav>
     <a href="index.php">Accueil</a>
-    <a href="recap.php">Panier</a>
+    <a href="contenuRecap.php">Panier</a>
 </nav>

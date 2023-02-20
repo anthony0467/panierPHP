@@ -8,7 +8,7 @@
     <title>Ajout produit</title>
 </head>
 <body>
-    
+
 <?php include 'menu.php'; ?>
 
 <h1>Ajouter un produit</h1>
@@ -21,7 +21,7 @@
     </p>
     <p>
         <label>
-            prix du produit: 
+            Prix du produit: 
             <input type="number" step="any" name="price">
         </label>
     </p>
@@ -32,12 +32,16 @@
         </label>
     </p>
     <p>
-            <input type="submit" name="submit" value="ajouter le produit">
+            <input type="submit" name="submit" value="Ajouter le produit">
     </p>
 </form>
 
 <?php
 
+    include('recap.php');
+
+     //echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" .$quantiteTotal."</strong></p";
+    
 
  ?>
     

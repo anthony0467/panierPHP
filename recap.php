@@ -15,8 +15,6 @@ session_start();
 
     <?php
 
-    include 'menu.php';
-
 
      if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
         echo "<p>Aucun produit en session...</p>";
@@ -33,6 +31,7 @@ session_start();
                  "</thead>",
                  "<tbody>";
         $totalGeneral = 0;
+        $quantiteTotal = 0;
         foreach($_SESSION['products'] as $index => $product){
                 echo "<tr>",
                         "<td>" .$index."</td>",
@@ -42,6 +41,7 @@ session_start();
                         "<td>" .number_format($product['total'],2, ",", "&nbsp;")."&nbsp;€</td>",
                      "</tr>";
                      $totalGeneral += $product['total'];
+                     $quantiteTotal += $product['qtt'];
         }
 
         echo "<tr>",
@@ -50,6 +50,8 @@ session_start();
               "</tr>",
             "</tbody",
             "</table>";
+
+            echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" .$quantiteTotal."</strong></p";
                         
                         
      }
