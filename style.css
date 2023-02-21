@@ -1,63 +1,66 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-size: 19px;
+/* ******************************************** GENERAL********************************************* */
+
+
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 19px;
 }
 
-h1{
-    text-align: center;
-    margin: 1rem 0;
-   
+h1 {
+	text-align: center;
+	margin: 1rem 0;
+
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-    background-color: black;
+nav {
+	display: flex;
+	justify-content: center;
+	background-color: black;
 }
 
-nav a{
-    margin: 1rem ;
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
+nav a {
+	margin: 1rem;
+	font-size: 18px;
+	color: #fff;
+	text-decoration: none;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-form p{
-    margin: .5rem;
-    
+form p {
+	margin: .5rem;
+
 }
 
-label{
-    font-size: 19px;
+label {
+	font-size: 19px;
 }
 
-input{
-    padding: .25rem;
-    font-size: 19px;
+input {
+	padding: .25rem;
+	font-size: 19px;
 }
 
-table{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+table {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-    margin: 2rem 0;
+	margin: 2rem 0;
 }
 
-th{
-    padding: .5rem;
+th {
+	padding: .5rem;
 }
 
-td{
-    padding: .5rem;
-    border: 1px solid black;
+td {
+	padding: .5rem;
+	border: 1px solid black;
 }
