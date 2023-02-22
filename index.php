@@ -36,7 +36,13 @@
 		<p>
 			<input type="submit" name="submit" value="Ajouter le produit">
 		</p>
+
 	</form>
+
+		<div><a class="btn" href="traitement.php?action=deleteAll">Supprimer tous les produits</a></div>
+
+
+
 
 	<?php
 

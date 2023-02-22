@@ -19,7 +19,8 @@ session_start();
 
 
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
-		echo "<p>Aucun produit en session...</p>";
+		echo "<p style='text-align: center;
+		font-size: 25px;'>Aucun produit en session...</p>";
 	} else {
 		echo "<table>",
 		"<thead>",
@@ -32,7 +33,7 @@ session_start();
 		"</tr>",
 		"</thead>",
 		"<tbody>";
-		// $totalGeneral = 0;
+		 $totalGeneral = 0;
 		$quantiteTotal = 0;
 		foreach ($_SESSION['products'] as $index => $product) {
 			echo "<tr>",
@@ -42,11 +43,11 @@ session_start();
 			"<td>" . $product['qtt'] . "</td>",
 			"<td>" . number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 			"</tr>";
-			// $totalGeneral += $product['total'];
+		    $totalGeneral += $product['total'];
 			$quantiteTotal += $product['qtt'];
 		}
 
-		var_dump($_SESSION['products']);
+		//var_dump($_SESSION['products']);
 
 
 		echo "<tr>",
@@ -56,9 +57,11 @@ session_start();
 		"</tbody",
 		"</table>";
 
-		echo "<button action='deleteAll'>Vider le panier</button>";
+		echo "<input type='hidden' name='action' value='deleteAll'>
+		<button type='submit' value='deleteAll'>Vider le panier</button>";
 
 		echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $quantiteTotal . "</strong></p";
+		var_dump($_SESSION['products']);
 	}
 	?>
 </body>
