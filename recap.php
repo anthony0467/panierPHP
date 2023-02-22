@@ -30,6 +30,7 @@ session_start();
 		"<th>Prix</th>",
 		"<th>Quantité</th>",
 		"<th>Total</th>",
+		"<th>Suprimer un produit</th>",
 		"</tr>",
 		"</thead>",
 		"<tbody>";
@@ -42,6 +43,7 @@ session_start();
 			"<td>" . number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>", //number_format( variable à modifier, nombre de décimales souhaité, caractère séparateur décimal, caractère séparateur de milliers5
 			"<td>" . $product['qtt'] . "</td>",
 			"<td>" . number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
+			"<td><button>Supprimer</button></td>",
 			"</tr>";
 		    $totalGeneral += $product['total'];
 			$quantiteTotal += $product['qtt'];
@@ -57,8 +59,7 @@ session_start();
 		"</tbody",
 		"</table>";
 
-		echo "<input type='hidden' name='action' value='deleteAll'>
-		<button type='submit' value='deleteAll'>Vider le panier</button>";
+	
 
 		echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $quantiteTotal . "</strong></p";
 		var_dump($_SESSION['products']);
