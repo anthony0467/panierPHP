@@ -34,6 +34,14 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 		case "deleteAll":
 			unset($_SESSION['products']);
 			break;
+
+		case 'deleteOneProduct':
+			$ref = $_GET['retrait'];
+			$key = array_search($ref, $_SESSION['products']);
+
+			array_splice($_SESSION['products'], $key, 1);
+			//unset($_SESSION['products'][$key]);
+			break;
 	}
 }
 
