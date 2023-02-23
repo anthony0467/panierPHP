@@ -62,7 +62,6 @@ session_start();
 
 
 		echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $quantiteTotal . "</strong></p";
-		var_dump($_SESSION['products']);
 	}
 	?>
 </body>

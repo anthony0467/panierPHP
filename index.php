@@ -39,15 +39,19 @@
 
 	</form>
 
-		<div><a class="btn" href="traitement.php?action=deleteAll">Supprimer tous les produits</a></div>
+	<div><a class="btn" href="traitement.php?action=deleteAll">Supprimer tous les produits</a></div>
 
 
 
 
 	<?php
+	include('nbProduit.php');
+	session_start();
+
+	$quantiteTotal = 0;
 
 
-	//echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $quantiteTotal . "</strong></p";
+	echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . qttTotal($quantiteTotal) . "</strong></p";
 
 
 	?>
