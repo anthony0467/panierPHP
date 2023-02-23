@@ -41,7 +41,9 @@ session_start();
 			"<td>" . $index . "</td>",
 			"<td>" . $product['name'] . "</td>",
 			"<td>" . number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>", //number_format( variable à modifier, nombre de décimales souhaité, caractère séparateur décimal, caractère séparateur de milliers5
+			"<td><button>-</button></td>",
 			"<td>" . $product['qtt'] . "</td>",
+			"<td><button type='submit' value='incrementButton'>+</button></td>",
 			"<td>" . number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 			"<td><div><a class='btn' href='traitement.php?action=deleteOneProduct&retrait=" . $index . "'>Supprimer</a></div></td>",
 			"</tr>";

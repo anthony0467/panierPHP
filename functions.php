@@ -13,3 +13,11 @@ function qttTotal($total) // fonction pour avoir la quantité total des produit
 		return "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $total . "</strong></p";
 	}
 }
+
+
+function increment($qtt){
+	$qtt = 0;
+	foreach($_SESSION['products'] as $index => $product){
+		
+	}
+}
