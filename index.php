@@ -11,7 +11,10 @@
 
 <body>
 
-	<?php include 'menu.php'; ?>
+	<?php include 'menu.php';
+	session_start();
+
+	?>
 
 	<h1>Ajouter un produit</h1>
 	<form action="traitement.php?action=add" method="post">
@@ -34,24 +37,31 @@
 			</label>
 		</p>
 		<p>
-			<input type="submit" name="submit" value="Ajouter le produit">
+			<input class="btn" type="submit" name="submit" value="Ajouter le produit">
 		</p>
 
 	</form>
 
-	<div><a class="btn" href="traitement.php?action=deleteAll">Supprimer tous les produits</a></div>
+	<div><a class="btn" href="traitement.php?action=deleteAll">Vider le panier</a></div>
 
 
 
 
 	<?php
-	include('nbProduit.php');
-	session_start();
 
-	$quantiteTotal = 0;
+	include('functions.php');
+
+	$message2 = (isset($_SESSION['message'])) ? $_SESSION['message'] : "<div style='    display: flex;
+	justify-content: center;'><p style='color: red; background-color: #fff; border: 1px solid red; text-align: center; padding: 0.5rem 1rem; border-radius: 15px;'> Erreur de saisie</p></div>"; // si message existe, message sinon message erreur
+	echo $message2;
+	unset($_SESSION['message']); // enlever le message quand on change de page ou on recharge
+
+	$quantiteTotal = 0; // variable de quantité initialisé à 0
+	echo  qttTotal($quantiteTotal); // fonction quantité total de produit
 
 
-	echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . qttTotal($quantiteTotal) . "</strong></p";
+	var_dump($_SESSION);
+
 
 
 	?>

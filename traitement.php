@@ -28,13 +28,15 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 
 					// enregistré le tableau product
 					$_SESSION['products'][] = $product;
+					$_SESSION['message'] =  "<div style='    display: flex;
+					justify-content: center;'><p style='color: #31dd31;  background-color: #fff; border: 1px solid #31dd31; text-align: center; padding: 0.5rem 1rem; border-radius: 15px;'>" . $product['name'] . "  ajouté</p></div>"; // ajouté un tableau message dans la session
 				}
 			}
 			break;
 		case "deleteAll":
 			unset($_SESSION['products']);
 			break;
-			
+
 		case 'deleteOneProduct':
 			$ref = $_GET['retrait'];
 			unset($_SESSION['products'][$ref]);

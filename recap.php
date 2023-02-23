@@ -30,7 +30,7 @@ session_start();
 		"<th>Prix</th>",
 		"<th>Quantité</th>",
 		"<th>Total</th>",
-		"<th>Suprimer un produit</th>",
+		"<th>Supprimer un produit</th>",
 		"</tr>",
 		"</thead>",
 		"<tbody>";
