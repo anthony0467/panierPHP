@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 	<title>Ajout produit</title>
 </head>
 
@@ -21,33 +23,33 @@
 
 	?>
 
-	<h1>Ajouter un produit</h1>
+	<h1> Ajouter un produit</h1>
 	<form action="traitement.php?action=add" method="post">
 		<p>
-			<label>
+			<label class="col-form-label">
 				Nom du produit:
-				<input type="text" name="name">
+				<input class="form-control" type="text" name="name">
 			</label>
 		</p>
 		<p>
-			<label>
+			<label class="col-form-label">
 				Prix du produit:
-				<input type="number" step="any" name="price">
+				<input class="form-control" type="number" step="any" name="price">
 			</label>
 		</p>
 		<p>
-			<label>
+			<label class="col-form-label">
 				Quantité désirée:
-				<input type="number" name="qtt" value="1">
+				<input class="form-control" type="number" name="qtt" value="1">
 			</label>
 		</p>
 		<p>
-			<input class="btn" type="submit" name="submit" value="Ajouter le produit">
+		<button type="button" class="btn btn-success"><input class="btn" type="submit" name="submit" value="Ajouter le produit"></button>
 		</p>
 
 	</form>
 
-	<div><a class="btn" href="traitement.php?action=deleteAll">Vider le panier</a></div>
+	<div><button type="button" class="btn btn-danger"><a class="btn" href="traitement.php?action=deleteAll">Vider le panier</a></button></div>
 
 
 
@@ -66,9 +68,8 @@
 
 	?>
 
-	<script>
-		
-	</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
 </body>
 

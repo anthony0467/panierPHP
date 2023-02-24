@@ -29,11 +29,11 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 					// enregistré le tableau product
 					$_SESSION['products'][] = $product;
 					$_SESSION['message'] =  "<div style='    display: flex;
-					justify-content: center;'><p style='color: #31dd31;  background-color: #fff; border: 1px solid #31dd31; text-align: center; padding: 0.5rem 1rem; border-radius: 15px;'>" . $product['name'] . "  ajouté</p></div>"; // ajouté un tableau message dans la session validé
+					justify-content: center;'><p class='alert alert-success'>" . $product['name'] . "  ajouté</p></div>"; // ajouté un tableau message dans la session validé
 				} else {
 
 					$_SESSION['message'] =  "<div style='    display: flex;
-					justify-content: center;'><p style='color: red;  background-color: #fff; border: 1px solid red; text-align: center; padding: 0.5rem 1rem; border-radius: 15px;'>Erreur de saisie</p></div>"; // sinon message erreur
+					justify-content: center;'><p class='alert alert-danger'>Erreur de saisie</p></div>"; // sinon message erreur
 				}
 			}
 			break;

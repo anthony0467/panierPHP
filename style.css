@@ -8,6 +8,10 @@
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body{
+	background-color: #c1c1e9!important;
+}
+
 
 h1 {
 	text-align: center;
@@ -28,12 +32,15 @@ nav a {
 	text-decoration: none;
 }
 
+a{
+	color: #000;
+}
+
 form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #c1c1e9;
 	max-width: 70%;
 	margin-left: auto;
 	margin-right: auto;
@@ -59,7 +66,7 @@ input {
 
 
 
-table {
+/*table {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -74,8 +81,8 @@ th {
 
 td {
 	padding: .5rem .5rem;
-	border: 1px solid black;
-}
+	
+}*/
 
 div {
 	text-align: center;
@@ -88,4 +95,8 @@ div {
 	color: #000;
 	text-decoration: none;
 	background-color: #7087da40;
+}
+
+.marg{
+	margin: 0 .5rem;
 }
