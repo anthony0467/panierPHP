@@ -42,25 +42,36 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 			break;
 
 		case 'deleteOneProduct':
-			$ref = $_GET['retrait'];
-			unset($_SESSION['products'][$ref]);
+			$id = $_GET['id'];
+			unset($_SESSION['products'][$id]);
 			header("location:contenuRecap.php"); // redirection           
 			die;
 			break;
 
-		case 'changeQtt':
+		case 'incrementQtt':
 			
-			$incrementQtt = $_GET['increment'];
-			$_SESSION['product'][$incrementQtt]++; // Incrémenter la quantité
-
-			$decrementQtt = $_GET['decrement'];
-			$_SESSION['product'][$decrementQtt]--; // Incrémenter la quantité
-
-
+			$id= $_GET['id'];
+			$_SESSION['products'][$id]["qtt"]++; // Incrémenter la quantité
 
 			  header("location:contenuRecap.php"); // redirection  
 			  die;
 			  break;
+
+			  case 'decrementQtt':
+				$id= $_GET['id'];
+
+				if($_SESSION['products'][$id]["qtt"] == 1){ // si le produit passe en dessous de 1 il disparait du tableau
+					unset($_SESSION['products'][$id]);
+					header("location:contenuRecap.php"); // redirection           
+					die;
+				}
+			
+				
+				$_SESSION['products'][$id]["qtt"]--; // Décrémenter la quantité ne pas oublié l'index
+				
+				  header("location:contenuRecap.php"); // redirection  
+				  die;
+				  break;
 	}
 }
 

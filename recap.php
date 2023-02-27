@@ -45,9 +45,9 @@ session_start();
 			"<td scope='row'>" . $index . "</td>",
 			"<td>" . $product['name'] . "</td>",
 			"<td>" . number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>", //number_format( variable à modifier, nombre de décimales souhaité, caractère séparateur décimal, caractère séparateur de milliers5
-			"<td ><a href='traitement.php?action=changeQtt&decrement=".$product['qtt']."'>-</a>" . $product['qtt'] . "<a href='traitement.php?action=changeQtt&increment=".$product['qtt']."'>+</a></td>",
+			"<td ><a href='traitement.php?action=decrementQtt&id=".$index."'>-</a>" . $product['qtt'] . "<a href='traitement.php?action=incrementQtt&id=".$index."'>+</a></td>",
 			"<td>" . number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
-			"<td><button type='button' class='btn btn-danger'><a class='btn' href='traitement.php?action=deleteOneProduct&retrait=" . $index . "'>Supprimer</a></button></td>",
+			"<td><button type='button' class='btn btn-danger'><a class='btn' href='traitement.php?action=deleteOneProduct&id=" . $index . "'>Supprimer</a></button></td>",
 			"</tr>";
 			$totalGeneral += $product['total'];
 			$quantiteTotal += $product['qtt'];
@@ -55,8 +55,8 @@ session_start();
 
 		//var_dump($_SESSION['products']);
 
-		echo "Quantité : " . $_SESSION['product']['qtt'];
-		var_dump($_SESSION);
+		//echo "Quantité : " . $_SESSION['product']['qtt'];
+		//var_dump($_SESSION);
 		echo "<tr>",
 		"<td colspan=4>Total général: </td>",
 		"<td><strong>" . number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</strong></td>",
