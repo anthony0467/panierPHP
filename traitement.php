@@ -47,6 +47,20 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 			header("location:contenuRecap.php"); // redirection           
 			die;
 			break;
+
+		case 'changeQtt':
+			
+			$incrementQtt = $_GET['increment'];
+			$_SESSION['product'][$incrementQtt]++; // Incrémenter la quantité
+
+			$decrementQtt = $_GET['decrement'];
+			$_SESSION['product'][$decrementQtt]--; // Incrémenter la quantité
+
+
+
+			  header("location:contenuRecap.php"); // redirection  
+			  die;
+			  break;
 	}
 }
 

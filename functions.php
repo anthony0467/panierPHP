@@ -14,10 +14,3 @@ function qttTotal($total) // fonction pour avoir la quantité total des produit
 	}
 }
 
-
-function increment($qtt){
-	$qtt = 0;
-	foreach($_SESSION['products'] as $index => $product){
-		
-	}
-}
