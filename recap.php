@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +18,7 @@ session_start();
 <body>
 
 	<?php
-
+	session_start();
 
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
 		echo "<p style='text-align: center;
@@ -62,11 +60,16 @@ session_start();
 		"<td><strong>" . number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</strong></td>",
 		"</tr>",
 		"</tbody",
-		"</table>";
+		"</table><br>";
 
+		//var_dump($_SESSION['alert']);
+		
 
+		echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $quantiteTotal . "</strong></p<br>";
 
-		echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $quantiteTotal . "</strong></p";
+		$alert = (isset($_SESSION['alert'])) ? $_SESSION['alert'] : null; // si message existe, message sinon null
+		echo $alert;
+		unset($_SESSION['alert']); // enlever le message quand on change de page ou on recharge
 	}
 	?>
 
