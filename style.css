@@ -23,7 +23,7 @@ h1 {
 nav {
 	display: flex;
 	justify-content: center;
-	background-color: black;
+	background-color: #000;
 }
 
 nav a {
@@ -31,6 +31,10 @@ nav a {
 	font-size: 18px;
 	color: #fff;
 	text-decoration: none;
+}
+
+nav a i{
+	font-size: 25px;
 }
 
 a{
@@ -66,7 +70,9 @@ input {
 	font-size: 19px;
 }
 
-
+span{
+	font-size: 25px;
+}
 
 /*table {
 	display: flex;
@@ -111,4 +117,19 @@ div {
 
 .marg:hover{
 	background: #4c6ad540;
+}
+
+.panier{
+	background: #5cab5c;
+    text-align: center;
+    border-radius: 25px;
+
+	position: absolute;
+    top: 18px;
+    right: -12px;
+    padding: 0 10px;
+}
+
+.relative{
+	position: relative;
 }
