@@ -67,9 +67,9 @@
 
 		echo "<p style='text-align: center; margin-top: 1rem;'>Nombre de produits dans le panier: <strong>" . $quantiteTotal . "</strong></p<br>";
 
-		$alert = (isset($_SESSION['alert'])) ? $_SESSION['alert'] : null; // si message existe, message sinon null
+		$alert = (isset($_SESSION['alert'])) ? $_SESSION['alert'] : null; // si alert existe, alert sinon null
 		echo $alert;
-		unset($_SESSION['alert']); // enlever le message quand on change de page ou on recharge
+		unset($_SESSION['alert']); // enlever l'alerte quand on change de page ou on recharge
 	}
 	?>
 

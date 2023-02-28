@@ -37,13 +37,13 @@
 		<p>
 			<label class="col-form-label">
 				Prix du produit:
-				<input class="form-control" type="number" step="any" name="price">
+				<input class="form-control" type="number" step="any" name="price" min="0.5">
 			</label>
 		</p>
 		<p>
 			<label class="col-form-label">
 				Quantité désirée:
-				<input class="form-control" type="number" name="qtt" value="1">
+				<input class="form-control" type="number" name="qtt" value="1" min="1">
 			</label>
 		</p>
 		<p>

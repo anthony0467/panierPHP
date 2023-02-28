@@ -43,9 +43,9 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 
 		case 'deleteOneProduct':
 			$id = $_GET['id'];
-			$productName = $_SESSION['products'][$id]["name"];
+			$productName = $_SESSION['products'][$id]["name"]; // récupérer le nom du produit
 			$_SESSION['alert'] = "<div style='    display: flex;
-			justify-content: center;'><p class='alert alert-danger'>" . $productName. "  à été supprimer du panier</p></div>";
+			justify-content: center;'><p class='alert alert-danger'>" . $productName. "  à été supprimer du panier</p></div>"; // message d'alert
 			unset($_SESSION['products'][$id]);
 			header("location:contenuRecap.php"); // redirection  
 			die;
@@ -64,9 +64,9 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 				$id= $_GET['id'];
 
 				if($_SESSION['products'][$id]["qtt"] == 1){ // si le produit passe en dessous de 1 il disparait du tableau
-					$productName = $_SESSION['products'][$id]["name"];
-					$_SESSION['alert'] = "<div style='    display: flex;
-					justify-content: center;'><p class='alert alert-danger'>" . $productName. "  à été supprimer du panier</p></div>";
+					$productName = $_SESSION['products'][$id]["name"]; // récupérer le nom du produit
+					$_SESSION['alert'] = "<div style='    display: flex; 
+					justify-content: center;'><p class='alert alert-danger'>" . $productName. "  à été supprimer du panier</p></div>"; // message d'alert
 					unset($_SESSION['products'][$id]);
 					header("location:contenuRecap.php"); // redirection           
 					die;
