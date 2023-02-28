@@ -62,6 +62,8 @@
 		"</tbody",
 		"</table><br>";
 
+		echo '<div><button type="button" class="btn btn-danger"><a class="btn" href="traitement.php?action=deleteAll">Vider le panier</a></button></div>';
+
 		//var_dump($_SESSION['alert']);
 		
 
@@ -72,6 +74,7 @@
 		unset($_SESSION['alert']); // enlever l'alerte quand on change de page ou on recharge
 	}
 	?>
+
 
 
 
