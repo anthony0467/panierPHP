@@ -14,3 +14,6 @@ function qttTotal($total) // fonction pour avoir la quantité total des produit
 	}
 }
 
+function calculTotalPrice($price, $quantity){
+	return $price * $quantity;
+}

@@ -45,7 +45,7 @@ session_start();
 			"<td scope='row'>" . $index . "</td>",
 			"<td>" . $product['name'] . "</td>",
 			"<td>" . number_format($product['price'], 2, ",", "&nbsp;") . "&nbsp;€</td>", //number_format( variable à modifier, nombre de décimales souhaité, caractère séparateur décimal, caractère séparateur de milliers5
-			"<td ><a href='traitement.php?action=decrementQtt&id=".$index."'>-</a>" . $product['qtt'] . "<a href='traitement.php?action=incrementQtt&id=".$index."'>+</a></td>",
+			"<td ><a class='marg' href='traitement.php?action=decrementQtt&id=".$index."'>-</a>" . $product['qtt'] . "<a class='marg' href='traitement.php?action=incrementQtt&id=".$index."'>+</a></td>",
 			"<td>" . number_format($product['total'], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 			"<td><button type='button' class='btn btn-danger'><a class='btn' href='traitement.php?action=deleteOneProduct&id=" . $index . "'>Supprimer</a></button></td>",
 			"</tr>";

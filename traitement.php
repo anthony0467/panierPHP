@@ -4,7 +4,7 @@
 //SUPERGLOBALE: Plusieurs variables prédéfinies en PHP sont "superglobales", ce qui signifie qu'elles sont disponibles quel que soit le contexte du script. Il est inutile de faire global $variable; avant d'y accéder dans les fonctions ou les méthodes. Les variables superglobales sont : $GLOBALS. (exemple: $_SESSION)
 //REQUETE HTTP: Une requête HTTP, acronyme de « Hypertext Transfer Protocol » renvoie au protocole HTTP utilisé par le navigateur web pour consulter un site internet. L'ordinateur de l'internaute, via un navigateur, envoie une requête au serveur web, qui lui apporte alors immédiatement une réponse en affichant la page web demandée.
 
-
+include('functions.php');
 session_start();
 
 if (isset($_GET['action'])) { // si action est déclaré et différente de NULL // si le mot action se trouve dans l'url
@@ -52,7 +52,7 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 			
 			$id= $_GET['id'];
 			$_SESSION['products'][$id]["qtt"]++; // Incrémenter la quantité
-
+			$_SESSION['products'][$id]["total"] = calculTotalPrice($_SESSION['products'][$id]["price"], $_SESSION['products'][$id]["qtt"] );
 			  header("location:contenuRecap.php"); // redirection  
 			  die;
 			  break;
@@ -68,7 +68,7 @@ if (isset($_GET['action'])) { // si action est déclaré et différente de NULL 
 			
 				
 				$_SESSION['products'][$id]["qtt"]--; // Décrémenter la quantité ne pas oublié l'index
-				
+				$_SESSION['products'][$id]["total"] = calculTotalPrice($_SESSION['products'][$id]["price"], $_SESSION['products'][$id]["qtt"] );
 				  header("location:contenuRecap.php"); // redirection  
 				  die;
 				  break;
